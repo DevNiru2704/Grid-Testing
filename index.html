@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creating a Simple Grid Basic Calculator Layout</title>
+    <style>
+        body{
+            margin:0;
+            padding:0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height:100vh;
+            font-size:50px;
+            background: linear-gradient(90deg, #ff0000 0%, #ff7300 50%, #fffb00 100%);
+        }
+        .card1,.card{
+            background-color: blueviolet;
+            margin: 10px;
+            color:white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            user-select: none;
+
+        }
+        .card1{
+            grid-column: span 4;
+            border-radius: 10px;
+            background-color: white;
+        }
+
+        .card:hover{
+            background-color: rgb(67, 11, 119);
+            box-shadow: black 0px 0px 10px 5px;
+        }
+        .card:active{
+            background-color: rgb(67, 11, 119);
+            box-shadow: black 0px 0px 10px 5px;
+            transform: translateY(10px);
+        }
+        .container{
+            display:grid;
+            grid-template-columns: repeat(4,1fr);
+            background-color: cornflowerblue;
+            gap: 1px;
+        }
+
+        @media( max-width: 600px){
+            body{
+                font-size:20px;
+            }
+            .card,.card1{
+                margin: 5px;
+            }
+            .card1{
+                border-radius: 5px;
+            }
+
+            .card:active{
+                transform: translateY(5px);
+            }
+
+            .card:hover{
+                box-shadow: black 0px 0px 5px 2px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card1"><pre></pre></div>
+        <div class="card">AC</div>
+        <div class="card">DEL</div>
+        <div class="card">(</div>
+        <div class="card">)</div>
+        <div class="card">7</div>
+        <div class="card">8</div>
+        <div class="card">9</div>
+        <div class="card">%</div>
+        <div class="card">4</div>
+        <div class="card">5</div>
+        <div class="card">6</div>
+        <div class="card">-</div>
+        <div class="card">1</div>
+        <div class="card">2</div>
+        <div class="card">3</div>
+        <div class="card">+</div>
+        <div class="card">%</div>
+        <div class="card">0</div>
+        <div class="card">.</div>
+        <div class="card">=</div>
+    </div>
+</body>
+</html>
